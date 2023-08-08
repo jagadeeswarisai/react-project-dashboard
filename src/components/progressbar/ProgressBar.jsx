@@ -6,7 +6,7 @@ const ProgressBar = ({ value }) => {
 
     useEffect(() => {
         barInnerRef.current.style.width = `${value}%`
-    }, [])
+    }, [value])  // Include 'value' in the dependency array
 
     return (
         <div className='progress-bar'>
@@ -16,3 +16,4 @@ const ProgressBar = ({ value }) => {
 }
 
 export default ProgressBar
+
